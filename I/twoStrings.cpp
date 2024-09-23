@@ -1,25 +1,45 @@
+
+// 1. Two Strings
+// Given two arrays of strings, determine whether corresponding elements contain a common substring.
+// For example, if array a = [ab,cd,ef] and array b = [laf, ee, eff] we make the following decisions:
+// For each test, print your result on a new line, either YES if there is a common substring, or NO. 
+// Function Description
+// Complete the function commonSubstring in the editor below. For each ali], bi] pair, the function must print YES if they share a common substring, or NO on a new line.
+// commonSubstring has the following parameters):
+// a[a[0],..a[n-1]]: an array of strings b[bO],..b[n-1]]: an array of strings
+
 #include<iostream>
 #include <vector>
+#include <unordered_set>
 using namespace std;
 
-bool sameString(string s1, string s2){
-    vector<bool>mp(52,false);
+bool common(string s1, string s2){
+    // vector<bool>mp(52,false);
 
-    for(int i=0;i<s1.size();i++){
-        mp[s1[i]- 'a'] = true;
-    }
-    for(int i=0;i<s1.size();i++){
-        if(mp[s2[i]-'a']){
-            return true;
+    // for(int i=0;i<s1.size();i++){
+    //     mp[s1[i]- 'a'] = true;
+    // }
+    // for(int i=0;i<s2.size();i++){
+    //     if(mp[s2[i]-'a']){
+    //         return true;
+    //     }
+    // }
+    // return false;
+    unordered_set<char>st(s1.begin(),s1.end());
+    for(int i=0;i<s2.size();i++){
+        if(st.find(s2[i]) != st.end()){ // if the character is found in the set
+                return true;
         }
     }
     return false;
+    // Using unordered_set: This data structure allows for average O(1) time complexity for insertions and lookups.
+
 }
 
 vector<string>sol(vector<string>s1,vector<string>s2){
     vector<string>ans;
     for(int i = 0;i<s1.size();i++){
-        if(sameString(s1[i],s2[i])){
+        if(common(s1[i],s2[i])){
             ans.push_back("YES");
         }
         else{
@@ -46,31 +66,3 @@ int main(){
 }
 
 
-
-// 1. Two Strings
-// i a[il b[i]
-
-
-// Common Result
-// 0 ab
-// af
-
-// a
-// YES
-// 1 cd
-// ee
-
-// NO
-// 2 ef
-// ef
-
-// ef
-// YES
-// Given two arrays of strings, determine whether corresponding elements contain a common substring.
-// For example, if array a = [ab,cd,ef) and array b = laf, ee,
-// eff, we make the following decisions:
-// For each test, print your result on a new line, either YES if there is a common substring, or NO. h
-// Function Description
-// Complete the function commonSubstring in the editor below. For each ali], bi] pair, the function must print YES if they share a common substring, or NO on a new line.
-// commonSubstring has the following parameters):
-// a[a[0],..a[n-1]]: an array of strings b[bO],..b[n-1]]: an array of strings
