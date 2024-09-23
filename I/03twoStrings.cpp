@@ -8,6 +8,10 @@
 // commonSubstring has the following parameters):
 // a[a[0],..a[n-1]]: an array of strings b[bO],..b[n-1]]: an array of strings
 
+
+//https://leetcode.com/discuss/interview-question/406151/IBM-or-OA-2019-or-Two-Strings-or-Backend
+//two strings
+
 #include<iostream>
 #include <vector>
 #include <unordered_set>

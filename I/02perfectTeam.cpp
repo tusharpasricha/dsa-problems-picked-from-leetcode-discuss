@@ -18,6 +18,9 @@
 // Constraints
 // • 5≤n≤ 5 x 105
 // • skills[i] are in the set (p,c,m, b,z)
+
+// https://leetcode.com/discuss/interview-question/815327/IBM-or-OA-2021
+// perfect team
 #include <iostream>
 #include <map>
 #include <algorithm>

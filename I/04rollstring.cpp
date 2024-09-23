@@ -1,3 +1,15 @@
+// Problem2: On a given string perform following operations. If operation is roll backward(L) then shift all character to one backward over given substring(‘b’ -> ‘a’, ‘a’ -> ‘z’). If operation is roll forward(L) then shift all character to one forward over given substring(‘b’ -> ‘c’, ‘z’ -> ‘a’).
+
+// Input: ‘abc’, [‘0 0 L’, ‘2 2 L’, ’0 2 R’]
+// Output : ‘acc’
+// Explain :
+// After ‘0 0 L’ ‘abc’ -> ‘zbc’
+// After ‘2 2 L’ ‘zbc’ -> ‘zbb’
+// After ‘0 2 R’ ‘zbb’ -> ‘acc’
+
+//https://leetcode.com/discuss/interview-question/4422119/IBM-Online-Assessment-Question-2024-(Intern)
+//valid word and roll string 
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -52,11 +64,3 @@ int main() {
 }
 
 
-// Problem2: On a given string perform following operations. If operation is roll backward(L) then shift all character to one backward over given substring(‘b’ -> ‘a’, ‘a’ -> ‘z’). If operation is roll forward(L) then shift all character to one forward over given substring(‘b’ -> ‘c’, ‘z’ -> ‘a’).
-
-// Input: ‘abc’, [‘0 0 L’, ‘2 2 L’, ’0 2 R’]
-// Output : ‘acc’
-// Explain :
-// After ‘0 0 L’ ‘abc’ -> ‘zbc’
-// After ‘2 2 L’ ‘zbc’ -> ‘zbb’
-// After ‘0 2 R’ ‘zbb’ -> ‘acc’

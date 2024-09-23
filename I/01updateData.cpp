@@ -12,6 +12,10 @@
 // 2. After the second update, the data becomes data = [-1, -4, 5, -21.
 // The final data is (-1, -4, 5, -2].
 
+// https://leetcode.com/discuss/interview-question/4143594/Need-help-regarding-this-problem-or-IBM-OA
+// updateData
+
+
 #include <iostream>
 #include<vector>
 using namespace std;

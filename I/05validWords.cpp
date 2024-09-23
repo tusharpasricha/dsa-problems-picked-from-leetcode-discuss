@@ -1,3 +1,13 @@
+
+// Problem1: Return number of valid word on string.
+// A word is valid if it’s length at least 3 and contain alphanumeric character and at least one vowel and one consonant.
+
+// Input: “This is a valid stateme$nt test”
+// Output: 3
+
+//https://leetcode.com/discuss/interview-question/4422119/IBM-Online-Assessment-Question-2024-(Intern)
+//valid word 
+
 #include <iostream>
 #include <cctype>
 
@@ -67,9 +77,3 @@ int main() {
     return 0;
 }
 
-
-// Problem1: Return number of valid word on string.
-// A word is valid if it’s length at least 3 and contain alphanumeric character and at least one vowel and one consonant.
-
-// Input: “This is a valid stateme$nt test”
-// Output: 3
